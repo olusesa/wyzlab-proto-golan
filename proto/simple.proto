@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package example.simple;
+
+option go_package = "github.com/olusesa/wyzlab-proto-golan/proto";
+
+
+message Simple {
+    uint32 id = 1;
+    string name = 2;
+    bool isSimple = 3;
+    repeated int32 sample_lists = 4;
+}

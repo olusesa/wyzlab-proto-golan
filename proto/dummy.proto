@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package example.dummy;
 
-option go_package = "https://github.com/olusesa/wyzlab-proto-golan/proto";
+option go_package = "github.com/olusesa/wyzlab-proto-golan/proto";
 
 
 message Dummy {
