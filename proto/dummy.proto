@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package example.dummy;
+
+option go_package = "https://github.com/olusesa/wyzlab-proto-golan/proto";
+
+
+message Dummy {
+    uint32 = 1;
+}
