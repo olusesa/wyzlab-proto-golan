@@ -1,5 +1,6 @@
 package main
 
+import "fmt"
 import pb "github.com/olusesa/wyzlab-proto-golan/proto"
 
 func doSimple() *pb.Simple {
@@ -12,5 +13,5 @@ func doSimple() *pb.Simple {
 }
 
 func main() {
-	fmt.println(doSimple());
+	fmt.Println(doSimple());
 }
