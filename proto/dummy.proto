@@ -6,5 +6,5 @@ option go_package = "https://github.com/olusesa/wyzlab-proto-golan/proto";
 
 
 message Dummy {
-    uint32 = 1;
+    uint32 id = 1;
 }

@@ -1,4 +1,4 @@
-BIN = proto-go-course
+BIN = wyzlab-proto-golan
 PROTO_DIR = proto
 
 ifeq ($(OS), Windows_NT)
