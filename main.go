@@ -26,7 +26,7 @@ func doComplex() *pb.Complex {
 
 func doEnum() *pb.Enumeration {
 	return &pb.Enumeration{
-		EyeColor: &pb.EyeColor_EYE_COLOR_BLUE,
+		EyeColor: &pb.EyeColor_EYE_COLOR_GREEN,
 	}
 }
 func main() {
