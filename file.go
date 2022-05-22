@@ -1,9 +1,9 @@
 package main
-import "fmt"
-import "ioutil"
-import "nil"
-import "log"
-import "proto"
+// import "fmt"
+// import "ioutil"
+// import "nil"
+// import "log"
+// import "proto"
 
 func writeToFile(fname string, pb proto.Message){
 	out, err := proto.Marshal(pb);
