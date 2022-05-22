@@ -8,8 +8,7 @@ func writeToFile(fname string, pb proto.Message){
 		log.Fatalln("Cant't serialize to bytes", err)
 		return
 	}
-	if err = ioutil.WriteFile(fname, out, 0644)
-	if err != nil {
+	if err = ioutil.WriteFile(fname, out, 0644); err != nil {
 	 log.Fatalln("Can't write to file", err)
 	 return
 	}
