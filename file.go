@@ -1,9 +1,7 @@
 package main
-// import "fmt"
-// import "ioutil"
-// import "nil"
-// import "log"
-// import "proto"
+
+import "fmt"
+import pb "github.com/olusesa/wyzlab-proto-golan/proto"
 
 func writeToFile(fname string, pb proto.Message){
 	out, err := proto.Marshal(pb);
