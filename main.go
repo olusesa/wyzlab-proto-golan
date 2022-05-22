@@ -24,11 +24,11 @@ func doComplex() *pb.Complex {
 	}
 }
 
-func doEnum() *pb.Enumeration {
-	return &pb.Enumeration{
-		EyeColor: &pb.EyeColor_EYE_COLOR_GREEN,
-	}
-}
+// func doEnum() *pb.Enumeration {
+// 	return &pb.Enumeration{
+// 		EyeColor: &pb.EyeColor_EYE_COLOR_GREEN,
+// 	}
+// }
 
 func doMap() *pb.MapExample {
 	return &pb.MapExample{
