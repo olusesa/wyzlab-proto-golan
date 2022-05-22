@@ -1,6 +1,6 @@
 package main
 import "fmt"
-import pb "github.com/olusesa/wyzlab-proto-golan/proto"
+//import pb "github.com/olusesa/wyzlab-proto-golan/proto"
 import "google.golang.org/protobuf/proto"
 
 func writeToFile(fname string, pb proto.Message){
