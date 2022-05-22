@@ -67,7 +67,7 @@ func doToJSON(p proto.Message) string{
 }
 
 func doFromJSON(jsonstring, t reflect.Type) proto.Message{
-	message := reflect.New(t).interface().(proto.Message)
+	message := reflect.New(t).Interface().(proto.Message)
 	fromJSON(jsonstring, message)
 	return message
 }
