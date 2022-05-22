@@ -51,13 +51,23 @@ func doOneOf(message interface{}) {
 	}
 }
 
+func doFile(p proto.Message){
+	path := "simple.bin"
+
+	writeToFile(path, p)
+	message := &pb.Simple{}
+	readDataFile(path, message)
+	fmt.Println(message)
+}
+
 func main() {
 	//fmt.Println(doSimple());
 	//fmt.Println(doComplex());
 	//fmt.Println(doEnum());
 	//fmt.Println(doMap());
-	fmt.Println("This should be an Id")
-	doOneOf(&pb.Result_Id{Id: 56})
-	fmt.Println("This should be a Message")
-	doOneOf(&pb.Result_Message{Message: "Allah is the greatest!!!"})
+	// fmt.Println("This should be an Id")
+	// doOneOf(&pb.Result_Id{Id: 56})
+	// fmt.Println("This should be a Message")
+	// doOneOf(&pb.Result_Message{Message: "Allah is the greatest!!!"})
+	doFile(doSimple)
 }
