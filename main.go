@@ -33,9 +33,9 @@ func doEnum() *pb.Enumeration {
 func doMap() *pb.MapExample {
 	return &pb.MapExample{
 		Ids: map[string]*pb.IdWrapper{
-			"wyzId1" : {id : 56},
-			"wyzId2" : {id : 57},
-			"wyzId3" : {id : 58},
+			"wyzId1": {Id : 56},
+			"wyzId2": {Id : 57},
+			"wyzId3": {Id : 58},
 		},
 	}
 }
