@@ -60,6 +60,18 @@ func doFile(p proto.Message){
 	fmt.Println(message)
 }
 
+func doToJSON(p proto.Message) string{
+	jsonstring := toJSON(p)
+	fmt.Println(jsonstring)
+	return jsonstring
+}
+
+func doFromJSON(jsonstring, t reflect.Type) proto.Message{
+	message := reflect.New(t).interface().(proto.Message)
+	fromJSON(jsonstring, message)
+	return message
+}
+
 func main() {
 	//fmt.Println(doSimple());
 	//fmt.Println(doComplex());
@@ -69,5 +81,10 @@ func main() {
 	// doOneOf(&pb.Result_Id{Id: 56})
 	// fmt.Println("This should be a Message")
 	// doOneOf(&pb.Result_Message{Message: "Allah is the greatest!!!"})
-	doFile(doSimple)
+	//doFile(doSimple)
+	//doToJSON(doSimple)
+	jsonString := doToJSON(doSimple)
+	message := doFromJSON(jsonString, reflect.TypeOf(pb.Simple()))
+	fmt.Println(jsonString)
+	fmt.Println(message)
 }
