@@ -4,7 +4,7 @@ import pb "github.com/olusesa/wyzlab-proto-golan/proto"
 import "google.golang.org/protobuf/proto"
 
 func writeToFile(fname string, pb proto.Message){
-	out, err := proto.Marshall(pb);
+	out, err := proto.Marshal(pb);
 
 	if err != nil {
 		log.Fatalln("Cant't serialize to bytes", err)
@@ -18,11 +18,6 @@ func writeToFile(fname string, pb proto.Message){
 }
 
 func readDataFile(fname string, pb proto.Message){
-	// in, err := b, err := ioutil.ReadFile(fname)
-	// if err != nil {
-	//  log.Print(err)
-	// }
-	// fmt.Println(string(b))
 	in , err := ioutil.ReadFile(fname)
 	if err != nill{
 		log.Fatalln("Can;t read file", err)
