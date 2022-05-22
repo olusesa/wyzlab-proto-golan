@@ -29,8 +29,20 @@ func doEnum() *pb.Enumeration {
 		EyeColor: &pb.EyeColor_EYE_COLOR_GREEN,
 	}
 }
+
+func doMap() *pb.MapExample {
+	return &pb.MapExample{
+		Ids: map[string]*pb.IdWrapper{
+			"wyzId1" : {id : 56},
+			"wyzId2" : {id : 57},
+			"wyzId3" : {id : 58},
+		}
+	}
+}
+
 func main() {
 	//fmt.Println(doSimple());
 	//fmt.Println(doComplex());
-	fmt.Println(doEnum());
+	//fmt.Println(doEnum());
+	fmt.Println(doMap());
 }
