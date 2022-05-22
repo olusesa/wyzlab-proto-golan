@@ -57,7 +57,7 @@ func main() {
 	//fmt.Println(doEnum());
 	//fmt.Println(doMap());
 	fmt.Println("This should be an Id")
-	doOneOf(&PB.Result_Id{Id: 56})
+	doOneOf(&pb.Result_Id{Id: 56})
 	fmt.Println("This should be a Message")
-	doOneOf(&PB.Result_Message{Message: "Allah is the greatest!!!"})
+	doOneOf(&pb.Result_Message{Message: "Allah is the greatest!!!"})
 }
