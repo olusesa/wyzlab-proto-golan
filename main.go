@@ -40,9 +40,24 @@ func doMap() *pb.MapExample {
 	}
 }
 
+func doOneOf(message Interface()) {
+	Switch x := message.(type) {
+	case *pb.Result_Id:
+		fmt.Println(message.(*pb.Result_Id).Id)
+	case *pb.Result_Message:
+		fmt.Println(message.(*pb.Result_Message).Message)
+	default:
+		fmt.Errorf("message has unexpected type: %v", x)
+	}
+}
+
 func main() {
 	//fmt.Println(doSimple());
 	//fmt.Println(doComplex());
 	//fmt.Println(doEnum());
-	fmt.Println(doMap());
+	//fmt.Println(doMap());
+	fmt.Println("This should be an Id")
+	doOneOf(&PB.Result_Id{Id: 56})
+	fmt.Println("This should be a Message")
+	doOneOf(&PB.Result_Message{Message: "Allah is the greatest!!!"})
 }
