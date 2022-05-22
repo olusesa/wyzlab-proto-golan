@@ -1,3 +1,4 @@
+package main
 import "google.golang.org/protobuf/proto"
 
 func writeToFile(fname string, pb proto.Message){
