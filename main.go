@@ -40,7 +40,7 @@ func doMap() *pb.MapExample {
 	}
 }
 
-func doOneOf(message Interface{}) {
+func doOneOf(message interface{}) {
 	Switch x := message.(type) {
 	case *pb.Result_Id:
 		fmt.Println(message.(*pb.Result_Id).Id)
